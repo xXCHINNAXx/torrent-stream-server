@@ -73,7 +73,8 @@ export function createApp(options?: AppOptions): Globals {
 export function createAndRunApp(options?: AppOptions): Globals {
     const { app, config, logger, client, logStorage } = createApp(options)
 
-    const server = app.listen(config.port, config.host, () => {
+    const server = app.listen(process.env.PORT || config.port, config.host, () => {
+        
         const accessHost = config.host === '0.0.0.0' ? '127.0.0.1' : config.host
 
         logger.info(
