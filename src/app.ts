@@ -73,13 +73,13 @@ export function createApp(options?: AppOptions): Globals {
 export function createAndRunApp(options?: AppOptions): Globals {
     const { app, config, logger, client, logStorage } = createApp(options)
 
-    const server = app.listen(process.env.PORT, config.host, () => {
+    const server = app.listen(`${process.env.PORT}`, config.host, () => {
         
         const accessHost = config.host === '0.0.0.0' ? '127.0.0.1' : config.host
 
         logger.info(
             [
-                `Running ${config.environment} server on ${config.host}:${config.port}`,
+                `Running ${config.environment} server on ${config.host}:${config.port}||||${process.env.PORT}`,
                 ...(config.environment === 'development' ? [
                     `* Website on http://${accessHost}:${config.port}`,
                     `* Docs on http://${accessHost}:${config.port}/api-docs`
