@@ -73,8 +73,8 @@ export function LogToJSON(value?: Log | null): any {
         return null
     }
     return {
-        message: value.message,
-        time: value.time,
-        level: value.level,
+        message: null,
+        time: null,
+        level: null,
     }
 }
