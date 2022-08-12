@@ -9,7 +9,7 @@ export default withBearer((): JSX.Element => {
     return (
         <Container className="mt-3">
             <InputWidget />
-            <HistoryWidget />
+                              {//  <HistoryWidget />}
         </Container>
     )
 })
