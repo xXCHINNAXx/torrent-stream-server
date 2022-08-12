@@ -8,8 +8,8 @@ export default withBearer(() => {
     return (
         <Container className="mt-3 content">
             <UsageWidget />
-            <ActiveTorrentsWidget />
-            <LogsWidget />
+            {//<ActiveTorrentsWidget />}
+                {//<LogsWidget />}
         </Container>
     )
 })
